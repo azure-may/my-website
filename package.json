@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "Azure May Burmeister Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+  },
+  "author": "Azure May Burmeister",
+  "license": "ISC",
+  "homepage": "https://azure-may.github.io/mywebsite",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}

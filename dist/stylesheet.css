@@ -1,0 +1,224 @@
+body{
+  background-color: #CBDDF5;
+  letter-spacing: .05rem;
+}
+
+h3{
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5rem;
+  letter-spacing: .08rem;
+  color: rgb(34, 34, 34);
+}
+
+span{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* header */
+#header{
+  background-color: #ffffff46;
+  width: 98%;
+  height: 128px;
+  margin: 1% 1%;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* header animation */
+#header-animation{
+  width: 100%;
+  background-size: contain;
+  background-position: 0 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+#mountain{
+  stroke-dasharray: 1632.703857421875px;
+  stroke-dashoffset: 0;
+  animation: mountain 3s ease-in;
+}
+
+@keyframes mountain{
+  from{stroke-dashoffset: 1632.703857421875px};
+}
+
+.line-animate{
+  stroke: #80050B; 
+  stroke-dasharray: 1572.5px;
+  animation: lineAnimation 2s ease-out;
+}
+
+@keyframes lineAnimation{
+  from{stroke-dashoffset: -1572.5px};
+  to{stroke-dashoffset: 0};
+}
+
+/* navbar */
+#navbar{
+  /* lighthouse icon to go here */
+}
+
+#name {
+  font-family: 'Megrim', cursive;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 0 0 3rem; 
+  padding: 1rem 2rem;
+  min-width: 300px;
+  z-index: 2;
+}
+
+/* hero */
+#hero{
+  padding: 12rem 0 0 0;
+  left: 0;
+  position: absolute;
+}
+
+/* hero animation */
+#hero-animation{}
+
+#right-wave{
+  transform-origin: bottom center;
+animation: wave 2.75s ease-in-out 1.5s infinite alternate;
+}
+
+#mid-right-wave{
+transform-origin: top left;
+animation: wave 2s ease-in-out .75s infinite alternate;
+}
+
+#left-wave{
+  transform-origin: top right;
+animation: wave 1.75s ease-in-out .25s infinite alternate;
+}
+
+#mid-left-wave{
+transform-origin: top center;
+animation: wave 1.75s ease-in-out .5s infinite alternate;
+}
+
+@keyframes wave{
+to{transform: rotate(1deg)}
+}
+
+@keyframes rightW{
+  to{transform: scale(1)rotate(8deg)};
+}
+
+/* about panel */
+#summary {
+  flex: 1;
+  flex-grow: 1;
+  margin: 0 3rem;
+}
+
+#title{
+  font-family: 'Kalam', cursive;
+  font-size: 1.2rem;
+}
+
+#underline{
+  height: 2px;
+  border-radius: 30px;
+  background-color: #CC0811;
+  animation: underline 2s ease-out 3s 1 right normal forwards;
+}
+
+@keyframes underline{
+  from{ width: 0%};
+  to{width: 100%}
+}
+
+#description{
+  font-family: 'Nixie One', cursive;
+  line-height: 1.5em;
+}
+
+/* skills container */
+#skills{
+  position: relative;
+  top: 31rem; 
+  left: 0;
+  z-index: 2;
+}
+
+/* flexbox containers and panels */
+.container{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+}
+
+.panel{
+  flex-basis: calc( 28% - 4rem );
+  padding: 2rem;
+  margin: 1rem 2rem;
+  min-width: 300px;
+}
+
+.stretch-panel{
+  flex-basis: 56%;
+  flex: 2;
+  padding: 2rem;
+  margin: 0 3rem;
+  min-width: 300px;
+}
+
+/* skills panels */
+.skills{
+  background-color: #f5f5f53a;
+  line-height: 2em;
+}
+
+.skills span {
+  margin: 0 0.5em 0 0;
+}
+
+.beginner{
+  color: #5E676B;
+  font-size: 1em;
+}
+
+.intermediate{
+  color: #88A7AC;
+  font-size: 1.2em;
+}
+
+.advanced{
+  color: #96BDD1;
+  font-size: 1.25em;
+}
+
+/* responsive */
+@media (max-width: 1285px){
+  .skills{
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width:919px){
+  #skills{
+    position: relative;
+    top: 50rem; 
+    left: 0;
+    z-index: 2;
+  }
+}
+
+/* footer */
+#footer{
+  text-align: center;
+  align-content: center;
+}
