@@ -20,7 +20,8 @@ span{
   width: 98%;
   height: 128px;
   margin: 1% 1%;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -40,7 +41,12 @@ span{
 #mountain{
   stroke-dasharray: 1632.703857421875px;
   stroke-dashoffset: 0;
-  animation: mountain 3s ease-in;
+  -webkit-animation: mountain 3s ease-in;
+          animation: mountain 3s ease-in;
+}
+
+@-webkit-keyframes mountain{
+  from{stroke-dashoffset: 1632.703857421875px};
 }
 
 @keyframes mountain{
@@ -50,7 +56,13 @@ span{
 .line-animate{
   stroke: #80050B; 
   stroke-dasharray: 1572.5px;
-  animation: lineAnimation 2s ease-out;
+  -webkit-animation: lineAnimation 2s ease-out;
+          animation: lineAnimation 2s ease-out;
+}
+
+@-webkit-keyframes lineAnimation{
+  from{stroke-dashoffset: -1572.5px};
+  to{stroke-dashoffset: 0};
 }
 
 @keyframes lineAnimation{
@@ -87,37 +99,56 @@ span{
 #hero-animation{}
 
 #right-wave{
-  transform-origin: bottom center;
-animation: wave 2.75s ease-in-out 1.5s infinite alternate;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+-webkit-animation: wave 2.75s ease-in-out 1.5s infinite alternate;
+        animation: wave 2.75s ease-in-out 1.5s infinite alternate;
 }
 
 #mid-right-wave{
-transform-origin: top left;
-animation: wave 2s ease-in-out .75s infinite alternate;
+-webkit-transform-origin: top left;
+        transform-origin: top left;
+-webkit-animation: wave 2s ease-in-out .75s infinite alternate;
+        animation: wave 2s ease-in-out .75s infinite alternate;
 }
 
 #left-wave{
-  transform-origin: top right;
-animation: wave 1.75s ease-in-out .25s infinite alternate;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+-webkit-animation: wave 1.75s ease-in-out .25s infinite alternate;
+        animation: wave 1.75s ease-in-out .25s infinite alternate;
 }
 
 #mid-left-wave{
-transform-origin: top center;
-animation: wave 1.75s ease-in-out .5s infinite alternate;
+-webkit-transform-origin: top center;
+        transform-origin: top center;
+-webkit-animation: wave 1.75s ease-in-out .5s infinite alternate;
+        animation: wave 1.75s ease-in-out .5s infinite alternate;
+}
+
+@-webkit-keyframes wave{
+to{-webkit-transform: rotate(1deg);transform: rotate(1deg)}
 }
 
 @keyframes wave{
-to{transform: rotate(1deg)}
+to{-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+}
+
+@-webkit-keyframes rightW{
+  to{-webkit-transform: scale(1)rotate(8deg);transform: scale(1)rotate(8deg)};
 }
 
 @keyframes rightW{
-  to{transform: scale(1)rotate(8deg)};
+  to{-webkit-transform: scale(1)rotate(8deg);transform: scale(1)rotate(8deg)};
 }
 
 /* about panel */
 #summary {
-  flex: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   margin: 0 3rem;
 }
 
@@ -130,7 +161,13 @@ to{transform: rotate(1deg)}
   height: 2px;
   border-radius: 30px;
   background-color: #CC0811;
-  animation: underline 2s ease-out 3s 1 right normal forwards;
+  -webkit-animation: underline 2s ease-out 3s 1 right normal forwards;
+          animation: underline 2s ease-out 3s 1 right normal forwards;
+}
+
+@-webkit-keyframes underline{
+  from{ width: 0%};
+  to{width: 100%}
 }
 
 @keyframes underline{
@@ -154,22 +191,31 @@ to{transform: rotate(1deg)}
 /* flexbox containers and panels */
 .container{
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100vw;
 }
 
 .panel{
-  flex-basis: calc( 28% - 4rem );
+  -ms-flex-preferred-size: calc( 28% - 4rem );
+      flex-basis: calc( 28% - 4rem );
   padding: 2rem;
   margin: 1rem 2rem;
   min-width: 300px;
 }
 
 .stretch-panel{
-  flex-basis: 56%;
-  flex: 2;
+  -ms-flex-preferred-size: 56%;
+      flex-basis: 56%;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   padding: 2rem;
   margin: 0 3rem;
   min-width: 300px;
@@ -203,7 +249,9 @@ to{transform: rotate(1deg)}
 /* responsive */
 @media (max-width: 1285px){
   .skills{
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     text-align: center;
   }
 }
@@ -220,5 +268,6 @@ to{transform: rotate(1deg)}
 /* footer */
 #footer{
   text-align: center;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
