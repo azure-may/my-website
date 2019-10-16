@@ -53,21 +53,30 @@ span{
   from{stroke-dashoffset: 1632.703857421875px};
 }
 
-.line-animate{
-  stroke: #80050B; 
+#horizontal-strong{
   stroke-dasharray: 1572.5px;
-  -webkit-animation: lineAnimation 2s ease-out;
-          animation: lineAnimation 2s ease-out;
+  stroke-dashoffset: 1572.5px;
+  -webkit-animation: draw 2s ease-out;
+  animation: draw 2s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes lineAnimation{
-  from{stroke-dashoffset: -1572.5px};
-  to{stroke-dashoffset: 0};
+#horizontal-light{
+  stroke-dasharray: 974.5399780273438px;
+  stroke-dashoffset: 974.5399780273438px;
+  -webkit-animation: draw 2s ease-out;
+  animation: draw 2s ease-out 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@keyframes lineAnimation{
-  from{stroke-dashoffset: -1572.5px};
-  to{stroke-dashoffset: 0};
+@-webkit-keyframes draw{
+  100%{stroke-dashoffset: 0};
+}
+
+@keyframes draw{
+  100%{stroke-dashoffset: 0};
 }
 
 /* navbar */
@@ -96,51 +105,6 @@ span{
 }
 
 /* hero animation */
-#hero-animation{}
-
-#right-wave{
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
--webkit-animation: wave 2.75s ease-in-out 1.5s infinite alternate;
-        animation: wave 2.75s ease-in-out 1.5s infinite alternate;
-}
-
-#mid-right-wave{
--webkit-transform-origin: top left;
-        transform-origin: top left;
--webkit-animation: wave 2s ease-in-out .75s infinite alternate;
-        animation: wave 2s ease-in-out .75s infinite alternate;
-}
-
-#left-wave{
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
--webkit-animation: wave 1.75s ease-in-out .25s infinite alternate;
-        animation: wave 1.75s ease-in-out .25s infinite alternate;
-}
-
-#mid-left-wave{
--webkit-transform-origin: top center;
-        transform-origin: top center;
--webkit-animation: wave 1.75s ease-in-out .5s infinite alternate;
-        animation: wave 1.75s ease-in-out .5s infinite alternate;
-}
-
-@-webkit-keyframes wave{
-to{-webkit-transform: rotate(1deg);transform: rotate(1deg)}
-}
-
-@keyframes wave{
-to{-webkit-transform: rotate(1deg);transform: rotate(1deg)}
-}
-
-@-webkit-keyframes rightW{
-  to{-webkit-transform: scale(1)rotate(8deg);transform: scale(1)rotate(8deg)};
-}
-
-@keyframes rightW{
-  to{-webkit-transform: scale(1)rotate(8deg);transform: scale(1)rotate(8deg)};
-}
 
 /* about panel */
 #summary {
@@ -158,21 +122,11 @@ to{-webkit-transform: rotate(1deg);transform: rotate(1deg)}
 }
 
 #underline{
-  height: 2px;
-  border-radius: 30px;
+  width: 100%;
   background-color: #CC0811;
-  -webkit-animation: underline 2s ease-out 3s 1 right normal forwards;
-          animation: underline 2s ease-out 3s 1 right normal forwards;
-}
-
-@-webkit-keyframes underline{
-  from{ width: 0%};
-  to{width: 100%}
-}
-
-@keyframes underline{
-  from{ width: 0%};
-  to{width: 100%}
+  display: block;
+  height: 2px;
+  margin-top: 20px;
 }
 
 #description{
