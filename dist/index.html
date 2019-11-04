@@ -1,103 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Azure May Burmeister Portfolio</title>
+  <title>Azure May Burmeister Portfolio</title>
   <meta name="author" content="Azure May Burmeister">
   <meta name="description" content="Full stack web developer">
   <meta name="keywords" content="web developer, full stack, JavaScript, Electron, Node, San Francisco, freelancer">
   <link href="https://fonts.googleapis.com/css?family=Kalam:300|Megrim|Nixie+One|Indie+Flower|Raleway:500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheet.css" type="text/css">
-
-  </head>
-  <body>
-    <!-- header -->
-    <div id="header"></div>
-      <div id="header-animation">
-        <svg width=100% height="233" viewBox="0 0 1650 233" xmlns="http://www.w3.org/2000/svg"><title>Animated line drawing of the golden gate bridge</title><g id="canvas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="header" transform="translate(-30)"><g id="animation" transform="translate(60 8)"><path id="mountain" stroke="#FFF" stroke-width="2" stroke-linecap="round" d="M50.032 120.331h54.164l36.203-12.536 53.882 12.536 33.349-6.268 36.104 16.075 83.323-22.343 56.926 12.536 103.85-36.754 38.6 30.486 19.957-7.205 53.432 13.473 33.201-13.473 22.566 13.473 38.88-13.473 123.273 23.28 66.606-22.343 43.69 12.536 73.945-13.473 26.22 13.473 83.506-36.754v23.28l86.859-74.21 44.828 50.93L1344.729 22l31.585 29.333 46.334-42.81L1448.399 27 1472.03.699"/><path d="M1525.5 107.404H550.96" id="horizontal-light" stroke="#B30710" stroke-width="1.5" stroke-linecap="round"/><path d="M1199.272 177.5v-107" id="vertical-light" stroke="#B30710" stroke-width="1.5" stroke-linecap="round"/><path d="M1572.5 126.601H0" id="horizontal-strong" stroke="#80050B" stroke-width="3" stroke-linecap="round"/><path d="M1219.282 49.809V212" id="vertical-strong" stroke="#80050B" stroke-width="3" stroke-linecap="round"/><g id="wavelets" transform="translate(1158 154)"><path id="Rectangle" d="M0 0h110v73H0z"/><path d="M66 51.542c.893-.166 1.706-.616 2.44-1.35.782-.78 1.484-1.844 2.107-3.192a25.396 25.396 0 003.38 2.41c1.41.835 2.84 1.546 4.292 2.132.963.372 2.008.372 3.138 0 1.171-.385 2.426-1.142 3.765-2.271.912 1.113 1.859 1.87 2.84 2.271.873.356 1.78.356 2.722 0" id="front-right" stroke="#FFF" stroke-linecap="round"/><path d="M42 56.743c1.388-.197 2.5-.596 3.335-1.198.836-.603 1.918-1.784 3.247-3.545.888 1.563 1.834 2.744 2.836 3.545.978.78 2.013 1.18 3.105 1.198" id="front-left" stroke="#FFF" stroke-linecap="round"/><path d="M42 27.743c1.388-.197 2.5-.596 3.335-1.198.836-.603 1.918-1.784 3.247-3.545.888 1.563 1.834 2.744 2.836 3.545.978.78 2.013 1.18 3.105 1.198" id="back-right" stroke="#FFF" stroke-linecap="round"/><path d="M53 66.867c1.145.137 2.19-.202 3.138-1.016.942-.809 1.785-2.092 2.529-3.851 1.221 1.734 2.518 3.018 3.89 3.851 1.298.79 2.673 1.128 4.122 1.016a8.42 8.42 0 001.373-1.016c.5-.47.909-.942 1.224-1.417a6.573 6.573 0 001.24 1.417 6.93 6.93 0 001.597 1.016" id="front-center" stroke="#FFF" stroke-linecap="round"/><path d="M20 17.867c1.145.137 2.19-.202 3.138-1.016.942-.809 1.785-2.092 2.529-3.851 1.221 1.734 2.518 3.018 3.89 3.851 1.298.79 2.673 1.128 4.122 1.016a8.42 8.42 0 001.373-1.016c.5-.47.909-.942 1.224-1.417a6.573 6.573 0 001.24 1.417 6.93 6.93 0 001.597 1.016" id="back-left" stroke="#FFF" stroke-linecap="round"/></g></g></g></g></svg>
-      <div id="name">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <div class="flexbox">
+  <!-- /-----------Header------------/ -->
+  <div class="header-container">
+    <div class="header-content">
+      <div class="header-background"></div>
+      <div class="header-animation">
+                <svg width=100% height="233" viewBox="0 0 1650 233" xmlns="http://www.w3.org/2000/svg"><title>Animated line drawing of the golden gate bridge</title><g id="canvas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="header" transform="translate(-30)"><g id="animation" transform="translate(60 8)"><path id="mountain" stroke="#FFF" stroke-width="2" stroke-linecap="round" d="M50.032 120.331h54.164l36.203-12.536 53.882 12.536 33.349-6.268 36.104 16.075 83.323-22.343 56.926 12.536 103.85-36.754 38.6 30.486 19.957-7.205 53.432 13.473 33.201-13.473 22.566 13.473 38.88-13.473 123.273 23.28 66.606-22.343 43.69 12.536 73.945-13.473 26.22 13.473 83.506-36.754v23.28l86.859-74.21 44.828 50.93L1344.729 22l31.585 29.333 46.334-42.81L1448.399 27 1472.03.699"/><path d="M1525.5 107.404H550.96" id="horizontal-light" stroke="#B30710" stroke-width="1.5" stroke-linecap="round"/><path d="M1199.272 177.5v-107" id="vertical-light" stroke="#B30710" stroke-width="1.5" stroke-linecap="round"/><path d="M1572.5 126.601H0" id="horizontal-strong" stroke="#80050B" stroke-width="3" stroke-linecap="round"/><path d="M1219.282 49.809V212" id="vertical-strong" stroke="#80050B" stroke-width="3" stroke-linecap="round"/><g id="wavelets" transform="translate(1158 154)"><path id="Rectangle" d="M0 0h110v73H0z"/><path d="M66 51.542c.893-.166 1.706-.616 2.44-1.35.782-.78 1.484-1.844 2.107-3.192a25.396 25.396 0 003.38 2.41c1.41.835 2.84 1.546 4.292 2.132.963.372 2.008.372 3.138 0 1.171-.385 2.426-1.142 3.765-2.271.912 1.113 1.859 1.87 2.84 2.271.873.356 1.78.356 2.722 0" id="front-right" stroke="#FFF" stroke-linecap="round"/><path d="M42 56.743c1.388-.197 2.5-.596 3.335-1.198.836-.603 1.918-1.784 3.247-3.545.888 1.563 1.834 2.744 2.836 3.545.978.78 2.013 1.18 3.105 1.198" id="front-left" stroke="#FFF" stroke-linecap="round"/><path d="M42 27.743c1.388-.197 2.5-.596 3.335-1.198.836-.603 1.918-1.784 3.247-3.545.888 1.563 1.834 2.744 2.836 3.545.978.78 2.013 1.18 3.105 1.198" id="back-right" stroke="#FFF" stroke-linecap="round"/><path d="M53 66.867c1.145.137 2.19-.202 3.138-1.016.942-.809 1.785-2.092 2.529-3.851 1.221 1.734 2.518 3.018 3.89 3.851 1.298.79 2.673 1.128 4.122 1.016a8.42 8.42 0 001.373-1.016c.5-.47.909-.942 1.224-1.417a6.573 6.573 0 001.24 1.417 6.93 6.93 0 001.597 1.016" id="front-center" stroke="#FFF" stroke-linecap="round"/><path d="M20 17.867c1.145.137 2.19-.202 3.138-1.016.942-.809 1.785-2.092 2.529-3.851 1.221 1.734 2.518 3.018 3.89 3.851 1.298.79 2.673 1.128 4.122 1.016a8.42 8.42 0 001.373-1.016c.5-.47.909-.942 1.224-1.417a6.573 6.573 0 001.24 1.417 6.93 6.93 0 001.597 1.016" id="back-left" stroke="#FFF" stroke-linecap="round"/></g></g></g></g></svg>
+      </div>
+      <div class="header-title">
         <h1>Azure May Burmeister</h1>
       </div>
-      <div id="navbar">
-        <!-- lighthouse menu icon to go here -->
+      <div class="header-navigation"></div>
+    </div>
+  </div>
+  <!-- /-----------Hero------------/ -->
+  <div class="hero container">
+    <div class="summary panel">
+      <div class="title">
+        <h2>Full-Stack Engineer</h2>
+        <span class="underline"></span>
+      </div>
+      <div class="description">
+        <p>Hi there. My name is Azure. <br/>I am a full-stack engineer living and working in San Francisco. I specialize in JavaScript but enjoy diving into new languages. I am passionate about thoughtful design and clean well structured code.</p>
       </div>
     </div>
-    <!-- hero -->
-    <div class="container" id="hero">
-      <div class="panel" id="summary">
-        <div id="title">
-          <h2>Full-Stack Engineer</h2>
-          <span id="underline"></span>
-        </div>
-        <div id="description">
-          <p>Hi there. My name is Azure. <br/>I am a full-stack engineer living and working in San Francisco. I specialize in JavaScript but enjoy diving into new languages. I am passionate about thoughtful design and clean well structured code.</p>
-        </div>
-      </div>  
-      <div class="stretch-panel" id="hero-animation">
-        <svg width=100% height=100% viewbox="0 0 800 300" xmlns="http://www.w3.org/2000/svg"><title>ocean animation</title><g id="canvas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="hero-animation" transform="translate(-122 -86)"><g id="waves"><path d="M734 96c5.87-.809 10.303-1.678 13.3-2.607 2.997-.929 6.256-2.726 9.776-5.393 3.862 2.625 7.123 4.423 9.783 5.393 2.66.971 6.707 1.84 12.141 2.607" id="right-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path d="M614 225c8.87-1.213 15.569-2.517 20.098-3.91 4.529-1.393 9.453-4.09 14.772-8.09 5.836 3.937 10.763 6.634 14.784 8.09 4.02 1.456 10.135 2.76 18.346 3.91" id="mid-right-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path d="M342 297c10.435-1.517 18.316-3.146 23.644-4.887 5.329-1.742 11.122-5.113 17.38-10.113 6.865 4.922 12.662 8.292 17.392 10.113 4.73 1.82 11.924 3.449 21.584 4.887" id="mid-left-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path d="M123 151c6.522-1.011 11.448-2.097 14.778-3.258s6.95-3.409 10.862-6.742c4.29 3.281 7.914 5.528 10.87 6.742 2.956 1.213 7.453 2.3 13.49 3.258" id="left-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path id="view-box" d="M0 0h1000v330H0z"/></g></g></g></svg>
-      </div>
+    <div class="stretch" id="hero-animation">
+        <svg width=100% height="233" viewbox="0 0 800 233" xmlns="http://www.w3.org/2000/svg"><title>ocean animation</title><g id="canvas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="hero-animation" transform="translate(-122 -86)"><g id="waves"><path d="M734 96c5.87-.809 10.303-1.678 13.3-2.607 2.997-.929 6.256-2.726 9.776-5.393 3.862 2.625 7.123 4.423 9.783 5.393 2.66.971 6.707 1.84 12.141 2.607" id="right-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path d="M614 225c8.87-1.213 15.569-2.517 20.098-3.91 4.529-1.393 9.453-4.09 14.772-8.09 5.836 3.937 10.763 6.634 14.784 8.09 4.02 1.456 10.135 2.76 18.346 3.91" id="mid-right-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path d="M342 297c10.435-1.517 18.316-3.146 23.644-4.887 5.329-1.742 11.122-5.113 17.38-10.113 6.865 4.922 12.662 8.292 17.392 10.113 4.73 1.82 11.924 3.449 21.584 4.887" id="mid-left-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path d="M123 151c6.522-1.011 11.448-2.097 14.778-3.258s6.95-3.409 10.862-6.742c4.29 3.281 7.914 5.528 10.87 6.742 2.956 1.213 7.453 2.3 13.49 3.258" id="left-wave" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><path id="view-box" d="M0 0h1000v330H0z"/></g></g></g></svg>
     </div>
-    <!-- skills -->
-    <div class="container" id="skills">
-      <div class="panel skills">
-        <h3>Design</h3>
-        <p>
-          <span class="intermediate">Sketch</span>
-          <span class="beginner">Figma</span>
-          <span class="intermediate">Lightroom</span>
-          <span class="advanced">Branding</span>
-          <span class="intermediate">Color Theory</span>
-          <span class="beginner">Typography</span>
-          <span class="advanced">Negative Space</span>
-          <span class="intermediate">Responsive</span>
-          <span class="beginner">SVG</span>
-          <span class="beginner">Version Control</span>
-        </p>
-      </div>
-      <div class="panel skills">
-        <h3>Front End</h3>
-        <p>
-          <span class="beginner">React</span>
-          <span class="intermediate">Modern JavaScript</span> 
-          <span class="beginner">Sass</span>
-          <span class="advanced">HTML5</span>
-          <span class="beginner">jQuery</span> 
-          <span class="intermediate">CSS3</span> 
-          <span class="beginner">GreenSock</span> 
-          <span class="advanced">Bootstrap</span> 
-          <span class="intermediate">Semantic UI</span> 
-          <span class="advanced">CodePen</span>
-          <span class="intermediate">Animation</span>
-        </p>
-      </div>
-      <div class="panel skills">
-        <h3>Back End</h3>
-        <p>
-          <span class="advanced">JavaScript</span>
-          <span class="intermediate">Node</span>
-          <span class="advanced">Express</span>
-          <span class="beginner">Electron</span>
-          <span class="intermediate">MongoDB</span>
-          <span class="beginner">Mocha</span>
-          <span class="intermediate">Visual Studio Code</span>
-          <span class="advanced">REST</span>
-        </p>
-      </div>
-      <!-- footer  -->
-      <div class="container">
-        <footer>
-          <p id="footer">Designed and developed by Azure May Burmeister. &copy <span id="year"></span></p>
-        </footer>
-      </div>
+  </div>
+  <!-- /-----------Portfolio------------/ -->
+  <div class="skills container">
+  <div class="skills container"id="skills">
+    <div class="skills panel">
+      <h3>Design</h3>
+      <p>
+        <span class="bold">Sketch</span>
+        <span class="light">Figma</span>
+        <span class="bold">Lightroom</span>
+        <span class="advanced">Branding</span>
+        <span class="bold">Color Theory</span>
+        <span class="light">Typography</span>
+        <span class="advanced">Negative Space</span>
+        <span class="bold">Responsive</span>
+        <span class="light">SVG</span>
+        <span class="light">Version Control</span>
+      </p>
     </div>
-    <!-- date stamp script -->
-    <script>
-      const date = new Date;
-      const currentYear = date.getFullYear();
-      const year = document.getElementById('year');
-      year.innerHTML = currentYear;
-    </script>
-  </body>
+    <div class="panel skills">
+      <h3>Front End</h3>
+      <p>
+        <span class="light">React</span>
+        <span class="medium">Modern JavaScript</span> 
+        <span class="light">Sass</span>
+        <span class="bold">HTML5</span>
+        <span class="light">jQuery</span> 
+        <span class="medium">CSS3</span> 
+        <span class="light">GreenSock</span> 
+        <span class="bold">Bootstrap</span> 
+        <span class="medium">Semantic UI</span> 
+        <span class="bold">CodePen</span>
+        <span class="medium">Animation</span>
+      </p>
+    </div>
+    <div class="panel skills">
+      <h3>Back End</h3>
+      <p>
+        <span class="bold">JavaScript</span>
+        <span class="medium">Node</span>
+        <span class="bold">Express</span>
+        <span class="light">Electron</span>
+        <span class="bold">MongoDB</span>
+        <span class="medium">Firebase</span>
+        <span class="light">Mocha</span>
+        <span class="medium">Visual Studio Code</span>
+        <span class="medium">CRUD</span>
+        <span class="bold">REST</span>
+      </p>
+    </div>
+  </div>
+  </div>
+  <!-- /-----------About/Learning Journey------------/ -->
+  <!-- /-----------Contact------------/ -->
+  <!-- /-----------Footer------------- -->
+    <div class="footer container">
+      <footer>
+        <p>Designed and developed by Azure May Burmeister. &copy <span id="year"></span></p>
+      </footer>
+    </div>
+  </div>
+      <!-- date stamp script -->
+  <script>
+    const date = new Date;
+    const currentYear = date.getFullYear();
+    const year = document.getElementById('year');
+    year.innerHTML = currentYear;
+  </script>
+</body>
 </html>
