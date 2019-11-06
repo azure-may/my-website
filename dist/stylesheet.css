@@ -17,16 +17,29 @@ span{
 }
 .flexbox
 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
   height: 100%;
 }
 .header-container
 {
-  order: 1;
-  flex-shrink: 1;
-  flex-grow: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 100%;
+  max-width: 1650px;
   padding-top: 15%;
   position: relative;
   z-index: 1;
@@ -54,7 +67,8 @@ span{
   height: 128px;
   margin: 1% 1%;
   position: absolute;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   top: 0;
   left: 0;
   background-color: #ffffff46;
@@ -75,30 +89,45 @@ span{
 }
 .container
 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 auto;
   position: relative;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+  max-width: 1650px;
 }
 .hero
 {
-  order: 2;
-  flex-shrink: 1;
-  flex-grow: 1;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .panel
 {
-  flex-basis: calc( 28% - 4rem );
+  -ms-flex-preferred-size: calc( 28% - 4rem );
+      flex-basis: calc( 28% - 4rem );
   padding: 0.5rem 1.5rem;
   margin: 0 2rem 3rem;
   min-width: 300px;
 }
 .stretch
 {
-  flex-basis: 58%;
-  flex: 2;
+  -ms-flex-preferred-size: 58%;
+      flex-basis: 58%;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   padding: 2rem;
   margin: 0 3rem;
   min-width: 300px;
@@ -117,17 +146,25 @@ span{
 }
 .summary
 {
-  flex: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   margin: 0 3rem;
   font-family: 'Nixie One', cursive;
   line-height: 1.5em;
 }
 .skills
 {
-  order: 3;
-  flex-shrink: 1;
-  flex-grow: 1;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 #skills{
   padding: 0 1.5rem;
@@ -151,9 +188,14 @@ span{
 }
 .footer
 {
-  order: 6;
-  flex: 1;
-  flex-grow: 1;
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   bottom: 0;
 }
 
@@ -161,7 +203,11 @@ span{
 #mountain{
   stroke-dasharray: 1632.703857421875px;
   stroke-dashoffset: 0;
-  animation: mountain 3s ease-in;
+  -webkit-animation: mountain 3s ease-in;
+          animation: mountain 3s ease-in;
+}
+@-webkit-keyframes mountain{
+  from{stroke-dashoffset: 1632.703857421875px};
 }
 @keyframes mountain{
   from{stroke-dashoffset: 1632.703857421875px};
@@ -169,14 +215,21 @@ span{
 #horizontal-strong{
   stroke-dasharray: 1572.5px;
   stroke-dashoffset: 1572.5px;
-  animation: draw 2s ease-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: draw 2s ease-out;
+          animation: draw 2s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #horizontal-light{
   stroke-dasharray: 974.5399780273438px;
   stroke-dashoffset: 974.5399780273438px;
-  animation: draw 2s ease-out 1.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: draw 2s ease-out 1.5s;
+          animation: draw 2s ease-out 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes draw{
+  100%{stroke-dashoffset: 0};
 }
 @keyframes draw{
   100%{stroke-dashoffset: 0};
@@ -189,5 +242,10 @@ span{
 @media (max-width: 919px){
   .hero{
     padding-top: 10%;
+  }
+}
+@media (max-height: 1100px){
+  .header-container .container{
+    margin: 1% auto;
   }
 }
