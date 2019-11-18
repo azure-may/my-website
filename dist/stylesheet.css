@@ -236,18 +236,30 @@ span{
 @keyframes draw{
   100%{stroke-dashoffset: 0};
 }
-@media (max-width: 1285px){
+@media screen and (max-width: 1285px){
   .skills{
     text-align: center;
   }
 }
-@media (max-width: 919px){
-  .hero{
-    padding-top: 10%;
-  }
-}
-@media (max-height: 1100px){
+@media screen and (max-height: 1100px){
   .header-container .container{
     margin: 1% auto;
+  }
+}
+@media screen and (max-width: 919px){
+  .header-container{
+    padding-top: 25%;
+  }
+  .header-title{
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .header-container{
+    padding-top: 30%;
+  }
+  .header-title{
+    padding-top: 0;
+    padding-left: 3rem;
   }
 }
